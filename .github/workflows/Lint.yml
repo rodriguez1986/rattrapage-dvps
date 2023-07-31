@@ -1,0 +1,37 @@
+name: Lint Workflow
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+jobs:
+  static_analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step for static analysis with Semgrep
+      - name: Run static analysis with semgrep
+        run: semgrep C:/Projet-dvps/sr  # Path to the 'src' directory of your project
+
+  dockerfile_analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step for Dockerfile analysis with Hadolint
+      - name: Run Dockerfile analysis with hadolint
+        run: hadolint C:/projet-dvps/Dockerfile  # Path to the project's Dockerfile
+
+  mega_calculator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      #Step to run MegaCalculator 
+      - name: Run MegaCalculator 
+        run: python C:/Projet-dvps/src/mega_calculator/__main__.py  # Path to the MegCalculator script of your project

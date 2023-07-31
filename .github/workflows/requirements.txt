@@ -1,0 +1,15 @@
+#Tous ceci n'est pas utile pour ce projet, juste montrer qu'on peut installer les dependances
+# Dépendances principales
+requests    #Bibliothèque pour effectuer des requêtes HTTP.
+numpy       #Bibliothèque pour les calculs numériques en Python.
+pandas      #Bibliothèque pour la manipulation et l'analyse de données.
+matplotlib  #Bibliothèque pour la création de visualisations et de graphiques.
+scipy       # Bibliothèque pour les fonctions mathématiques et scientifiques avancées.
+scikit-learn #Bibliothèque d'apprentissage automatique (machine learning) simple et efficace.
+
+# Dépendances pour le développement
+pytest
+coverage
+flake8
+mypy
+black
